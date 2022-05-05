@@ -46,7 +46,7 @@ public class CodiceFiscaleMain {
 
 			
 			try {
-				while (xmlr.hasNext()) { // continua a leggere finché ha eventi a disposizione
+				while (xmlr.hasNext()) { // continua a leggere finchÃ© ha eventi a disposizione
 					 
 					
 					
@@ -58,7 +58,7 @@ public class CodiceFiscaleMain {
 					 case XMLStreamConstants.START_ELEMENT: // inizio di un elemento: stampa il nome del tag e i suoi attributi
 					 System.out.println("Tag " + xmlr.getLocalName());
 					 
-					 tipo = xmlr.getLocalName(); //per capire che tipo di dato sta leggendo, servirà più avanti
+					 tipo = xmlr.getLocalName(); //per capire che tipo di dato sta leggendo, servirÃ  piÃ¹ avanti
 					 
 					 for (int i = 0; i < xmlr.getAttributeCount(); i++) {
 					 System.out.printf(" => attributo %s->%s%n", xmlr.getAttributeLocalName(i), xmlr.getAttributeValue(i)); 			
@@ -74,7 +74,7 @@ public class CodiceFiscaleMain {
 					 case XMLStreamConstants.COMMENT:
 					 System.out.println("// commento " + xmlr.getText()); break; // commento: ne stampa il contenuto
 					 
-					 case XMLStreamConstants.CHARACTERS: // content all’interno di un elemento: stampa il testo
+					 case XMLStreamConstants.CHARACTERS: // content allâ€™interno di un elemento: stampa il testo
 						 if (xmlr.getText().trim().length() > 0) // controlla se il testo non contiene solo spazi
 							 System.out.println("-> " + xmlr.getText()); 
 						
@@ -113,7 +113,7 @@ public class CodiceFiscaleMain {
 							 break;
 						 }  
 						
-						 case "data_nascita": //qua dentro si crea direttamente la persona in quanto è l'ultimo attributo
+						 case "data_nascita": //qua dentro si crea direttamente la persona in quanto Ã¨ l'ultimo attributo
 						 {
 							 if(!xmlr.getText().equals("\n        ")) {
 								 dataPersona = xmlr.getText(); //per convertire la data e "spezzarla"
@@ -176,7 +176,7 @@ public class CodiceFiscaleMain {
 			
 			
 			try {
-				while (xmlr2.hasNext()) { // continua a leggere finché ha eventi a disposizione
+				while (xmlr2.hasNext()) { // continua a leggere finchÃ© ha eventi a disposizione
 					
 					switch (xmlr2.getEventType()) { // switch sul tipo di evento
 					 case XMLStreamConstants.START_DOCUMENT: // inizio del documento: stampa che inizia il documento
@@ -185,7 +185,7 @@ public class CodiceFiscaleMain {
 					 case XMLStreamConstants.START_ELEMENT: // inizio di un elemento: stampa il nome del tag e i suoi attributi
 					 System.out.println("Tag " + xmlr2.getLocalName());
 					 
-					 tipo = xmlr2.getLocalName(); //per capire che tipo di dato sta leggendo, servirà più avanti
+					 tipo = xmlr2.getLocalName(); //per capire che tipo di dato sta leggendo, servirÃ  piÃ¹ avanti
 					 
 					 for (int i = 0; i < xmlr2.getAttributeCount(); i++) {
 					 System.out.printf(" => attributo %s->%s%n", xmlr2.getAttributeLocalName(i), xmlr2.getAttributeValue(i)); 			
@@ -201,7 +201,7 @@ public class CodiceFiscaleMain {
 					 case XMLStreamConstants.COMMENT:
 					 System.out.println("// commento " + xmlr2.getText()); break; // commento: ne stampa il contenuto
 					 
-					 case XMLStreamConstants.CHARACTERS: // content all’interno di un elemento: stampa il testo
+					 case XMLStreamConstants.CHARACTERS: // content allâ€™interno di un elemento: stampa il testo
 						 if (xmlr2.getText().trim().length() > 0) // controlla se il testo non contiene solo spazi
 							 System.out.println("-> " + xmlr2.getText()); 
 						
@@ -266,7 +266,7 @@ public class CodiceFiscaleMain {
 			
 			
 			try {
-				while (xmlr3.hasNext()) { // continua a leggere finché ha eventi a disposizione
+				while (xmlr3.hasNext()) { // continua a leggere finchÃ© ha eventi a disposizione
 					
 					switch (xmlr3.getEventType()) { // switch sul tipo di evento
 					 case XMLStreamConstants.START_DOCUMENT: // inizio del documento: stampa che inizia il documento
@@ -275,7 +275,7 @@ public class CodiceFiscaleMain {
 					 case XMLStreamConstants.START_ELEMENT: // inizio di un elemento: stampa il nome del tag e i suoi attributi
 					 System.out.println("Tag " + xmlr3.getLocalName());
 					 
-					 tipo = xmlr3.getLocalName(); //per capire che tipo di dato sta leggendo, servirà più avanti
+					 tipo = xmlr3.getLocalName(); //per capire che tipo di dato sta leggendo, servirÃ  piÃ¹ avanti
 					 
 					 for (int i = 0; i < xmlr3.getAttributeCount(); i++) {
 					 System.out.printf(" => attributo %s->%s%n", xmlr3.getAttributeLocalName(i), xmlr3.getAttributeValue(i)); 			
@@ -291,7 +291,7 @@ public class CodiceFiscaleMain {
 					 case XMLStreamConstants.COMMENT:
 					 System.out.println("// commento " + xmlr3.getText()); break; // commento: ne stampa il contenuto
 					 
-					 case XMLStreamConstants.CHARACTERS: // content all’interno di un elemento: stampa il testo
+					 case XMLStreamConstants.CHARACTERS: // content allâ€™interno di un elemento: stampa il testo
 						 if (xmlr3.getText().trim().length() > 0) // controlla se il testo non contiene solo spazi
 							 System.out.println("-> " + xmlr3.getText()); 
 						
@@ -344,3 +344,4 @@ public class CodiceFiscaleMain {
 		}
 	
 }
+
